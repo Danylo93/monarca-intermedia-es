@@ -30,8 +30,8 @@ export default function Header() {
       <div className="container">
         <nav>
           <a href="#inicio" className="logo" onClick={(e) => handleNavClick(e, '#inicio')}>
-            <i className="fas fa-crown" aria-hidden />
-            MONARCA
+            <img src="/logo.jpeg" alt="Monarca Intermediações" />
+            <span>MONARCA</span>
           </a>
 
           <ul className={`nav-links ${menuOpen ? 'active' : ''}`}>

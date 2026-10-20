@@ -11,7 +11,8 @@ export default function Footer() {
         <div className="footer-grid">
           <div className="footer-col">
             <div className="logo" style={{ marginBottom: 20 }}>
-              <i className="fas fa-crown" aria-hidden /> MONARCA
+              <img src="/logo.jpeg" alt="Monarca Intermediações" />
+              <span>MONARCA</span>
             </div>
             <p>
               Especialistas em revisão de contratos financeiros e defesa do consumidor. Lutamos por
