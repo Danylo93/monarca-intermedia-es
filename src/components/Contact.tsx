@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { CONTATO, MAILTO_URL, MAPA_URL, WHATSAPP_URL } from '../data/contato'
 
 export default function Contact() {
   const [form, setForm] = useState({ nome: '', telefone: '', servico: '', mensagem: '' })
@@ -37,7 +38,14 @@ export default function Contact() {
               <i className="fab fa-whatsapp" aria-hidden />
               <div>
                 <strong>WhatsApp</strong>
-                <p>(11) 99999-9999</p>
+                <p>
+                  <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+                    {CONTATO.telefone.exibicao}
+                  </a>
+                </p>
+                <p className="info-meta">
+                  {CONTATO.responsavel.nome} — {CONTATO.responsavel.cargo}
+                </p>
               </div>
             </div>
 
@@ -45,7 +53,9 @@ export default function Contact() {
               <i className="fas fa-envelope" aria-hidden />
               <div>
                 <strong>E-mail</strong>
-                <p>contato@monarcaintermediacoes.com.br</p>
+                <p>
+                  <a href={MAILTO_URL}>{CONTATO.email}</a>
+                </p>
               </div>
             </div>
 
@@ -53,7 +63,13 @@ export default function Contact() {
               <i className="fas fa-map-marker-alt" aria-hidden />
               <div>
                 <strong>Endereço</strong>
-                <p>Av. Paulista, 1000 - São Paulo, SP</p>
+                <p>
+                  <a href={MAPA_URL} target="_blank" rel="noopener noreferrer">
+                    {CONTATO.endereco.logradouro} - {CONTATO.endereco.complemento}
+                    <br />
+                    {CONTATO.endereco.bairro} - {CONTATO.endereco.cidade}/{CONTATO.endereco.uf}
+                  </a>
+                </p>
               </div>
             </div>
 
@@ -61,7 +77,7 @@ export default function Contact() {
               <i className="fas fa-clock" aria-hidden />
               <div>
                 <strong>Horário</strong>
-                <p>Seg a Sex: 08h às 18h</p>
+                <p>{CONTATO.horario}</p>
               </div>
             </div>
           </div>

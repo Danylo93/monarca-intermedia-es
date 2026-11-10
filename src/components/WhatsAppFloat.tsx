@@ -1,7 +1,9 @@
+import { WHATSAPP_URL } from '../data/contato'
+
 export default function WhatsAppFloat() {
   return (
     <a
-      href="https://wa.me/5511999999999"
+      href={WHATSAPP_URL}
       className="whatsapp-float"
       target="_blank"
       rel="noopener noreferrer"
