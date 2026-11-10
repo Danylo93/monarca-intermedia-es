@@ -114,7 +114,7 @@ export default function Footer({ onOpenPolicy }: Props) {
         </div>
 
         <div className="copyright">
-          © 2026 Monarca Intermediações. Todos os direitos reservados. CNPJ: 00.000.000/0001-00
+          © 2026 Monarca Intermediações. Todos os direitos reservados.
         </div>
       </div>
     </footer>
